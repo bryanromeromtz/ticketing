@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta3
+kind: Config
+manifests:
+  rawYaml:
+    - ./infra/k8s/* # Ruta a tus archivos YAML de Kubernetes
+build:
+  local:
+    push: false # Cambia a true si quieres hacer push de las imágenes a un registro
+  artifacts:
+    - image: modeselektor333/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
+  tagPolicy:
+    sha256: {}
