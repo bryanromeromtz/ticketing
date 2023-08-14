@@ -1,0 +1,5 @@
+{
+  "yaml.schemas": {
+    "kubernetes://schema/v1%40service": "file:///c%3A/Users/eduscore-04/Documents/code/ticketing/infra/k8s/auth-depl.yaml"
+  }
+}
