@@ -10,5 +10,5 @@ app.get("/api/users/currentuser", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server on port ${port}!`);
+  console.log(`Server on port ${port}!!!!`);
 });
